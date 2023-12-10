@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Työnseurantasovellus</title>
+    <!-- Lisää tarvittaessa CSS-tyylejä -->
+</head>
+<body>
+    <h1>Työmerkinnät</h1>
+    <div>
+        <ul>
+            <li th:each="event : ${events}">
+                <span th:text="${event.description}">Kuvaus</span> -
+                <span th:text="${event.date}">Päivämäärä</span>
+                <!-- Lisää Muokkaa ja Poista -painikkeet tarvittaessa -->
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
